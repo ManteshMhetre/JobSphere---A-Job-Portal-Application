@@ -46,28 +46,17 @@ const JobPost = () => {
     "Systems Administration",
     "IT Consulting",
   ];
-
   const cities = [
-    "Karachi",
-    "Lahore",
-    "Islamabad",
-    "Rawalpindi",
-    "Faisalabad",
-    "Multan",
+    "Bengaluru",
     "Hyderabad",
-    "Quetta",
-    "Peshawar",
-    "Sialkot",
-    "Gujranwala",
-    "Sargodha",
-    "Bahawalpur",
-    "Sukkur",
-    "Mardan",
-    "Mingora",
-    "Sheikhupura",
-    "Mandi Bahauddin",
-    "Larkana",
-    "Nawabshah",
+    "Pune",
+    "Chennai",
+    "Mumbai",
+    "Gurugram",
+    "Noida",
+    "Kolkata",
+    "Ahmedabad",
+    "Trivandrum",
   ];
 
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -213,8 +202,7 @@ const JobPost = () => {
         </div>
         <select
           value={hiringMultipleCandidates}
-          onChange={(e) => setHiringMultipleCandidates(e.target.value)}
-        >
+          onChange={(e) => setHiringMultipleCandidates(e.target.value)}>
           <option value="">Hiring Multiple Candidates?</option>
           <option value="Yes">Yes</option>
           <option value="No">No</option>
@@ -253,8 +241,7 @@ const JobPost = () => {
           style={{ margin: "0 auto" }}
           className="btn"
           onClick={handlePostJob}
-          disabled={loading}
-        >
+          disabled={loading}>
           Post Job
         </button>
       </div>

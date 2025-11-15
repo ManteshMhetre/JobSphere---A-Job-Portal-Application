@@ -19,9 +19,9 @@ const Footer = () => {
         <div>
           <h4>Support</h4>
           <ul>
-            <li>Street No.007 Shahrah-e-Faisal Karachi, Pakistan</li>
+            <li>NicheNest Office,City Vista, Kharadi, Pune.</li>
             <li>nichenest@gmail.com</li>
-            <li>+92 3106507521</li>
+            <li>+91 9106507521</li>
           </ul>
         </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="copyright">
-        &copy; CopyRight 2024. All Rights Reserved By CodeWithZeeshu
+        &copy; CopyRight 2025. All Rights Reserved By Mantesh
       </div>
     </>
   );
