@@ -1,10 +1,38 @@
-# NaukriWala - Job Portal
+# JobSphere - A Job Portal Application
 
-A full-stack job portal application built with React.js frontend and Node.js backend using PostgreSQL database.
+A full-stack job portal application built with React.js frontend and Node.js backend using PostgreSQL queries.
+
+## 🌐 Live Demo
+
+**[🚀 View Live Application](https://jobsphere-frontend-three.vercel.app/)**
+
+### 🔐 Demo Credentials
+
+Try the application using these test accounts:
+
+| Role           | Email                | Password   |
+| -------------- | -------------------- | ---------- |
+| **Job Seeker** | `jobseeker@test.com` | `Test@123` |
+| **Employer**   | `employer@test.com`  | `Test@123` |
+
+---
+
+## ✨ Features
+
+- 🔐 **Authentication** - Secure JWT-based authentication with httpOnly cookies
+- 👤 **Dual User Roles** - Job Seekers and Employers with different dashboards
+- 📝 **Job Management** - Post, edit, delete, and search jobs
+- 📄 **Application System** - Apply to jobs with resume upload
+- 🔍 **Advanced Search** - Filter by city, job niche, and keywords
+- 📧 **Email Notifications** - Newsletter and application updates
+- 📱 **Responsive Design** - Works on desktop and mobile devices
+
+---
 
 ## 🚀 Quick Setup
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 - PostgreSQL database (Neon DB recommended)
@@ -12,6 +40,7 @@ A full-stack job portal application built with React.js frontend and Node.js bac
 ### 1. Get PostgreSQL Database URL
 
 #### Option A: Using Neon DB (Recommended - Free)
+
 1. Go to [Neon.tech](https://neon.tech/)
 2. Sign up for a free account
 3. Create a new project
@@ -19,6 +48,7 @@ A full-stack job portal application built with React.js frontend and Node.js bac
    - It should look like: `postgresql://username:password@host:port/database?sslmode=require`
 
 #### Option B: Local PostgreSQL
+
 1. Install PostgreSQL on your machine
 2. Create a database
 3. Get your connection string: `postgresql://username:password@localhost:5432/your_database`
@@ -110,6 +140,7 @@ RUN_CRON=true
 ## 🗄️ Database
 
 The application uses PostgreSQL with the following main tables:
+
 - `users` - User accounts (job seekers and employers)
 - `jobs` - Job postings
 - `applications` - Job applications

@@ -100,18 +100,18 @@ const Jobs = () => {
                 <h2>Filter Job By City</h2>
                 {cities.map((city, index) => (
                   <>
-                  <div key={index}>
-                    <input
-                      type="radio"
-                      id={city}
-                      name="city"
-                      value={city}
-                      checked={selectedCity === city}
-                      onChange={() => handleCityChange(city)}
+                    <div key={index}>
+                      <input
+                        type="radio"
+                        id={city}
+                        name="city"
+                        value={city}
+                        checked={selectedCity === city}
+                        onChange={() => handleCityChange(city)}
                       />
-                    <label htmlFor={city}>{city}</label>
-                  </div>
-                      </>
+                      <label htmlFor={city}>{city}</label>
+                    </div>
+                  </>
                 ))}
               </div>
               <div className="cities">
@@ -143,8 +143,7 @@ const Jobs = () => {
                 </select>
                 <select
                   value={niche}
-                  onChange={(e) => setNiche(e.target.value)}
-                >
+                  onChange={(e) => setNiche(e.target.value)}>
                   <option value="">Filter By Niche</option>
                   {nichesArray.map((niche, index) => (
                     <option value={niche} key={index}>
@@ -154,7 +153,8 @@ const Jobs = () => {
                 </select>
               </div>
               <div className="jobs_container">
-                {jobs && jobs.length > 0 ? (jobs.map((element) => {
+                {jobs && jobs.length > 0 ? (
+                  jobs.map((element) => {
                     return (
                       <div className="card" key={element.id}>
                         {element.hiringMultipleCandidates === "Yes" ? (
@@ -177,23 +177,48 @@ const Jobs = () => {
                         <div className="btn-wrapper">
                           <Link
                             className="btn"
-                            to={`/post/application/${element.id}`}
-                          >
+                            to={`/post/application/${element.id}`}>
                             Apply Now
                           </Link>
                         </div>
                       </div>
                     );
-                  })) : (
-                  /************************************************************/
-                  /* BUG No.2 */
-                  <img src="./notfound.png" alt="job-not-found" style={{width: "100%"}}/>)
-                  /************************************************************/
-
-
-
-
-                  }
+                  })
+                ) : (
+                  <div
+                    className="no-jobs-found"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "60px 20px",
+                      textAlign: "center",
+                      width: "100%",
+                    }}>
+                    <div style={{ fontSize: "80px", marginBottom: "20px" }}>
+                      🔍
+                    </div>
+                    <h2
+                      style={{
+                        fontSize: "24px",
+                        color: "#333",
+                        marginBottom: "10px",
+                        fontWeight: "600",
+                      }}>
+                      No Jobs Found
+                    </h2>
+                    <p
+                      style={{
+                        fontSize: "16px",
+                        color: "#666",
+                        maxWidth: "400px",
+                      }}>
+                      We couldn't find any jobs matching your criteria. Try
+                      adjusting your filters or search keywords.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
